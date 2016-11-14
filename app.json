@@ -7,7 +7,7 @@
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#FF4D64",
     "navigationBarTitleText": "淘票",
-    "backgroundColor":"#000",
+    "backgroundColor":"#FFF",
     "navigationBarTextStyle":"white"
   }
 }
