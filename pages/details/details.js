@@ -4,6 +4,8 @@ Page({
     films: [],
     loading: false,
     title: '正在热映',
+    video: 'video-hide',
+    windowWidth: 0
   },
   onLoad: function (options) {
     var id = 'http://m.maoyan.com/movie/' + options.id + '.json'
@@ -32,8 +34,17 @@ Page({
     wx.setNavigationBarTitle({
       title: that.data.title
     })
+    wx.getSystemInfo({
+      success: (res) => {
+        that.setData({
+          windowHeight: res.windowHeight,
+          windowWidth: res.windowWidth
+        })
+      }
+    })
   },
   pay: function(){
+    console.log('pay');
     wx.requestPayment({
        'timeStamp': '',
        'nonceStr': '',
@@ -41,9 +52,21 @@ Page({
        'signType': 'MD5',
        'paySign': '',
        'success':function(res){
+          console.log('success');
        },
        'fail':function(res){
+          console.log('fail');
        }
+    })
+  },
+  vShow: function(){
+    this.setData({
+      video: 'video-show'
+    })
+  },
+  vHid: function(){
+    this.setData({
+      video: 'video-hide'
     })
   }
 })

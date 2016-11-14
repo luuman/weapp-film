@@ -11,6 +11,17 @@
     overflow: hidden;
     position: relative;
 }
+.video-hide{
+	display: none;
+}
+.video-show{
+	display: block;
+	position: absolute;
+	width: 750rpx;
+	height: 406rpx;
+	top: 0;
+	left: 0;
+}
 .bg{
 	position: absolute;
 	left: 0;
@@ -31,10 +42,10 @@
 }
 .detail-play{
 	position: absolute;
-	left: 45rpx;
-	top: 70rpx;
-	width: 40rpx;
-	height: 40rpx;
+	left: 70rpx;
+	top: 130rpx;
+	width: 80rpx;
+	height: 80rpx;
 }
 .detail-title{
 	height: 70rpx;
@@ -103,4 +114,10 @@
 .detail-sale .pre-sale{
 	border: 1rpx solid #fea54c;
 	color: #fea54c;
+}
+.details-dra view{
+	margin: 23rpx;
+    color: #333;
+    font-size: 14px;
+    line-height: 20px;
 }
