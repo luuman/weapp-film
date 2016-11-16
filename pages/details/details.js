@@ -5,6 +5,7 @@ Page({
     loading: false,
     title: '正在热映',
     video: 'video-hide',
+    datails: '',
     windowWidth: 0
   },
   onLoad: function (options) {
@@ -26,6 +27,12 @@ Page({
           films: res.data.data,
           loading: true
         })
+        var pages = that.data.films.MovieDetailModel.dra
+        pages = pages.replace(/<.*?>/ig,"")
+        that.setData({
+          details: pages
+        })
+        console.log(pages)
       }
     })
   },

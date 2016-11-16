@@ -19,7 +19,7 @@
 	<image class="bg" src="https://gw.alicdn.com/tps/i4/TB1pa7pJFXXXXX6XFXXwwg20FXX-640-448.png"></image>
 <video class="{{video}}" autoplay="true" bindended="vHid" src="{{films.MovieDetailModel.vd}}" controls></video>
 </view>
-<scroll-view class="details-dra"><view>{{films.MovieDetailModel.dra}}</view></scroll-view>
+<scroll-view class="details-dra"><view>{{details}}</view></scroll-view>
 <button type="primary" size="{{primarySize}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="pay"> 立即购票 </button>
 <button bindtap="pay">立即购票</button>
 
